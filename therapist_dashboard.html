@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Therapist Dashboard</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+font-family: Arial;
+background:#8fa6bf;
+margin:0;
+}
+
+/* Header */
+
+.header{
+background:#0f2f4f;
+color:white;
+padding:22px;
+font-size:24px;
+font-weight:bold;
+}
+
+/* Layout */
+
+.container{
+padding:30px;
+}
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+/* Cards */
+
+.card{
+background:#f5f7fb;
+padding:22px;
+border-radius:12px;
+box-shadow:0 6px 14px rgba(0,0,0,0.12);
+border:3px solid #2f5d8c;
+color:#0f2f4f;
+}
+
+.card h2{
+margin-top:0;
+color:#0f2f4f;
+}
+
+.card b{
+color:#1f4e8c;
+}
+
+/* Graph card */
+
+.chart-card{
+grid-column: span 3;
+}
+
+/* Recovery badge */
+
+.badge{
+padding:6px 14px;
+border-radius:18px;
+background:#2f5d8c;
+color:white;
+font-size:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Therapist Rehabilitation Monitoring Dashboard
+</div>
+
+<div class="container">
+
+<div class="dashboard">
+
+<div class="card">
+<h2>Patient Overview</h2>
+<p><b>ID:</b> P034</p>
+<p><b>Age:</b> 62</p>
+<p><b>Stroke Severity:</b> Moderate</p>
+<p><b>Affected Hand:</b> Right</p>
+<p><b>Sessions Completed:</b> 18</p>
+</div>
+
+<div class="card">
+<h2>Live Motion Data</h2>
+<p>Thumb Angle: <b>42°</b></p>
+<p>Index Angle: <b>45°</b></p>
+<p>Middle Angle: <b>48°</b></p>
+<p>Ring Angle: <b>41°</b></p>
+<p>Little Angle: <b>38°</b></p>
+<p>Grip Force: <b>11 N</b></p>
+<p>Palm Pressure: <b>6 kPa</b></p>
+</div>
+
+<div class="card">
+<h2>Rehabilitation Metrics</h2>
+<p>Average ROM: <b>56°</b></p>
+<p>Peak Grip Force: <b>12 N</b></p>
+<p>Success Rate: <b>82%</b></p>
+<p>Endurance Time: <b>3.2 s</b></p>
+<p>Fatigue Index: <b>18%</b></p>
+<p>Recovery Score: <span class="badge">71 / 100</span></p>
+</div>
+
+<div class="card chart-card">
+<h2>Recovery Progress</h2>
+<canvas id="recoveryChart"></canvas>
+</div>
+
+<div class="card">
+<h2>ROM Improvement</h2>
+<canvas id="romChart"></canvas>
+</div>
+
+<div class="card">
+<h2>Grip Strength Trend</h2>
+<canvas id="gripChart"></canvas>
+</div>
+
+<div class="card">
+<h2>Grip Force During Session</h2>
+<canvas id="forceChart"></canvas>
+</div>
+
+<div class="card chart-card">
+<h2>Finger Flexion Analysis</h2>
+<canvas id="fingerChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+window.onload = function(){
+
+/* Recovery Progress */
+
+const ctx = document.getElementById('recoveryChart').getContext('2d');
+
+new Chart(ctx,{
+type:'line',
+data:{
+labels:['Session 1','Session 2','Session 3','Session 4','Session 5'],
+datasets:[{
+label:'Recovery Score',
+data:[45,52,61,70,78],
+borderColor:'#0f2f4f',
+backgroundColor:'rgba(15,47,79,0.2)',
+borderWidth:3,
+tension:0.4
+}]
+}
+});
+
+/* ROM Graph */
+
+const romCtx = document.getElementById('romChart').getContext('2d');
+
+new Chart(romCtx,{
+type:'line',
+data:{
+labels:['Session 1','Session 2','Session 3','Session 4','Session 5'],
+datasets:[{
+label:'Average ROM',
+data:[45,50,54,56,58],
+borderColor:'#2f5d8c',
+backgroundColor:'rgba(47,93,140,0.2)',
+borderWidth:3,
+tension:0.4
+}]
+}
+});
+
+/* Grip Strength */
+
+const gripCtx = document.getElementById('gripChart').getContext('2d');
+
+new Chart(gripCtx,{
+type:'line',
+data:{
+labels:['Session 1','Session 2','Session 3','Session 4','Session 5'],
+datasets:[{
+label:'Grip Strength',
+data:[20,26,31,36,42],
+borderColor:'#5f87b2',
+backgroundColor:'rgba(95,135,178,0.2)',
+borderWidth:3,
+tension:0.4
+}]
+}
+});
+
+/* Grip Force vs Time */
+
+const forceCtx = document.getElementById('forceChart').getContext('2d');
+
+new Chart(forceCtx,{
+type:'line',
+data:{
+labels:[0,1,2,3,4,5,6,7,8,9,10],
+datasets:[{
+label:'Grip Force (N)',
+data:[0,1,5,20,40,50,48,30,10,1,0],
+borderColor:'#1f4e8c',
+backgroundColor:'rgba(31,78,140,0.2)',
+borderWidth:3,
+tension:0.4
+}]
+}
+});
+
+/* Finger Flexion */
+
+const fingerCtx = document.getElementById('fingerChart').getContext('2d');
+
+new Chart(fingerCtx,{
+type:'line',
+data:{
+labels:[0,1,2,3,4,5,6,7,8,9,10],
+datasets:[
+{
+label:'Thumb Assisted',
+data:[0,5,20,40,55,56,55,35,10,0,0],
+borderColor:'#2f5d8c',
+borderWidth:2
+},
+{
+label:'Index Assisted',
+data:[0,6,22,42,57,58,57,36,11,0,0],
+borderColor:'#3e6ea3',
+borderWidth:2
+},
+{
+label:'Middle Assisted',
+data:[0,7,23,44,58,59,58,37,11,0,0],
+borderColor:'#5f87b2',
+borderWidth:2
+},
+{
+label:'Ring Assisted',
+data:[0,6,21,41,56,57,56,35,10,0,0],
+borderColor:'#7a9cc6',
+borderWidth:2
+},
+{
+label:'Little Assisted',
+data:[0,5,19,38,54,55,54,34,9,0,0],
+borderColor:'#9fb7d6',
+borderWidth:2
+}
+]
+}
+});
+
+}
+
+</script>
+
+</body>
+</html>
