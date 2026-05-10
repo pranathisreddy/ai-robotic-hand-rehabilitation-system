@@ -1,6 +1,6 @@
 # AI Robotic Hand Rehabilitation System
 
-An AI-assisted rehabilitation dashboard designed to simulate robotic hand therapy, patient recovery tracking, and therapist monitoring for stroke rehabilitation support.
+An AI-assisted rehabilitation dashboard designed to support robotic hand therapy, patient recovery tracking, and therapist monitoring for stroke rehabilitation and physiotherapy support.
 
 ## Features
 
@@ -10,9 +10,41 @@ An AI-assisted rehabilitation dashboard designed to simulate robotic hand therap
 * Grip strength analysis
 * Finger flexion tracking
 * ROM (Range of Motion) improvement visualization
-* Session history and recovery trends
+* Session history and recovery trend analysis
 * Personalized rehabilitation recommendations
 * Interactive Streamlit-based dashboard
+
+## Rehabilitation Parameters Monitored
+
+### Patient Parameters
+
+* Stroke severity level
+* Affected hand
+* Rehabilitation mode
+* Session duration and repetitions
+
+### Real-Time Monitoring
+
+* Finger flexion angles
+* Grip force tracking
+* ROM measurements
+* Motion smoothness analysis
+* Assist level monitoring
+
+### Session Performance Metrics
+
+* Recovery score
+* Peak grip force
+* Average ROM
+* Session endurance
+* Progress tracking across sessions
+
+### Therapist Monitoring
+
+* Session history
+* Recovery improvement trends
+* Compliance tracking
+* Personalized rehabilitation feedback
 
 ## Technologies Used
 
@@ -20,14 +52,16 @@ An AI-assisted rehabilitation dashboard designed to simulate robotic hand therap
 * Streamlit
 * Pandas
 * Plotly
+* HTML/CSS
 * CSV-based data handling
 
 ## Applications
 
 * Stroke rehabilitation support
 * Smart healthcare systems
-* Robotic hand therapy simulation
 * AI-assisted physiotherapy monitoring
+* Robotic rehabilitation simulation
+* Patient recovery analysis
 
 ## Project Preview
 
@@ -74,3 +108,7 @@ An AI-assisted rehabilitation dashboard designed to simulate robotic hand therap
 * Machine learning-based recovery prediction
 * Cloud database integration
 * Real patient rehabilitation tracking
+
+## Project Goal
+
+The system aims to provide real-time biofeedback, track rehabilitation progress, and support personalized therapy intensity using objective performance metrics and rehabilitation analytics.
