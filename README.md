@@ -1,48 +1,34 @@
-# Smart Patient Monitoring Dashboard
+# AI Robotic Hand Rehabilitation System
 
-A Python-based healthcare monitoring and appointment management system designed to streamline patient tracking, therapy sessions, and dashboard visualization.
+An AI-assisted rehabilitation management system designed to support robotic hand therapy and patient recovery tracking.
 
 ## Features
 
-* Patient monitoring and management
-* Dashboard-based visualization
-* Therapy session tracking
-* CSV-based data handling
-* Simulation engine integration
-* HTML dashboard support
+* Patient registration and management
+* Rehabilitation session tracking
+* Appointment scheduling
+* Therapy monitoring dashboard
+* Doctor and therapist interaction
+* Data visualization and storage
 
 ## Technologies Used
 
 * Python
-* HTML
-* CSV
-* Object-Oriented Programming
+* Streamlit
+* Pandas
+* HTML/CSS
+* CSV-based data handling
 
-## Project Files
+## Applications
 
-* `app.py` – Main application logic
-* `patient_dashboard.py` – Dashboard functionality
-* `simulation_engine.py` – Simulation and monitoring engine
-* `therapist_dashboard.html` – Frontend dashboard interface
-* `requirements.txt` – Project dependencies
+* Physical rehabilitation support
+* Smart healthcare systems
+* AI-assisted therapy management
+* Patient recovery monitoring
 
 ## Future Enhancements
 
-* Database integration
-* Real-time analytics
-* IoT sensor connectivity
-* Authentication system
-# patient-monitoring-appointment-system
-## Project Preview
-
-### Patient Registration
-![Patient Registration](Screenshot%202026-05-10%20124235.png)
-
-### Registered Patients
-![Registered Patients](Screenshot%202026-05-10%20124251.png)
-
-### Appointment Booking
-![Appointment Booking](Screenshot%202026-05-10%20124326.png)
-
-### Patient Details & Appointments
-![Patient Details](Screenshot%202026-05-10%20124349.png)
+* Real-time sensor integration
+* AI-based rehabilitation analysis
+* IoT-enabled robotic hand tracking
+* Cloud database support
