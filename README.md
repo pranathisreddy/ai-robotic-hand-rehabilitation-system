@@ -33,3 +33,16 @@ A Python-based healthcare monitoring and appointment management system designed 
 * IoT sensor connectivity
 * Authentication system
 # patient-monitoring-appointment-system
+## Project Preview
+
+### Patient Registration
+![Patient Registration](Screenshot%202026-05-10%20124235.png)
+
+### Registered Patients
+![Registered Patients](Screenshot%202026-05-10%20124251.png)
+
+### Appointment Booking
+![Appointment Booking](Screenshot%202026-05-10%20124326.png)
+
+### Patient Details & Appointments
+![Patient Details](Screenshot%202026-05-10%20124349.png)
